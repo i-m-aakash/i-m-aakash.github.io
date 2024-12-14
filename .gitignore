@@ -1,12 +1,11 @@
-# Local Site Directories
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
+# Project dependencies
+.cache
+node_modules
+yarn-error.log
+package-lock.json
 
-# Ruby Gems
-.bundle
-Gemfile.lock
+# Build directory
+/public
+.DS_Store
 
-# Log Files
-*.log
+.vscode/
