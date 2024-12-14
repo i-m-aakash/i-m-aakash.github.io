@@ -38,8 +38,8 @@ module.exports = {
       url: '/#projects',
     },
     {
-      name: 'Blogs',
-      url: '/#blogs',
+      name: 'Other Noteworthy Projects',
+      url: '/#other-noteworthy-projects',
     },
     {
       name: 'Conferences',

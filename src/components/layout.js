@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
-import { Head, Loader, Nav, Social, Email, Footer } from '@components';
+import { Head, Loader, Nav, Social, Email, Footer, Projects } from '@components';
 import { GlobalStyle, theme } from '@styles';
-// import Blogs from '@components/sections/blogs';
+import projects from '@components'; // Import projects from the content directory
+import Blogs from './blogs'; // Uncomment the import statement
+import Conferences from './conferences'; // Ensure Conferences is imported
 
 const StyledContent = styled.div`
   display: flex;
@@ -68,7 +70,6 @@ const Layout = ({ children, location }) => {
               <Email isHome={isHome} />
 
               <div id="content">
-      
                 {children}
                 <Footer />
               </div>

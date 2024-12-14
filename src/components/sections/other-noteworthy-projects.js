@@ -7,7 +7,7 @@ import sr from '@utils/sr';
 import { Icon } from '@components/icons';
 import { usePrefersReducedMotion } from '@hooks';
 
-const StyledBlogsSection = styled.section`
+const StyledProjectsSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,7 +24,7 @@ const StyledBlogsSection = styled.section`
     }
   }
 
-  .blogs-grid {
+  .projects-grid {
     ${({ theme }) => theme.mixins.resetList};
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -43,7 +43,7 @@ const StyledBlogsSection = styled.section`
   }
 `;
 
-const StyledBlog = styled.li`
+const StyledProject = styled.li`
   position: relative;
   cursor: default;
   transition: var(--transition);
@@ -51,7 +51,7 @@ const StyledBlog = styled.li`
   @media (prefers-reduced-motion: no-preference) {
     &:hover,
     &:focus-within {
-      .blog-inner {
+      .project-inner {
         transform: translateY(-7px);
       }
     }
@@ -62,7 +62,7 @@ const StyledBlog = styled.li`
     z-index: 1;
   }
 
-  .blog-inner {
+  .project-inner {
     ${({ theme }) => theme.mixins.boxShadow};
     ${({ theme }) => theme.mixins.flexBetween};
     flex-direction: column;
@@ -76,7 +76,7 @@ const StyledBlog = styled.li`
     overflow: auto;
   }
 
-  .blog-top {
+  .project-top {
     ${({ theme }) => theme.mixins.flexBetween};
     margin-bottom: 35px;
 
@@ -88,7 +88,7 @@ const StyledBlog = styled.li`
       }
     }
 
-    .blog-links {
+    .project-links {
       display: flex;
       align-items: center;
       margin-right: -10px;
@@ -114,7 +114,7 @@ const StyledBlog = styled.li`
     }
   }
 
-  .blog-title {
+  .project-title {
     margin: 0 0 10px;
     color: var(--lightest-slate);
     font-size: var(--fz-xxl);
@@ -135,7 +135,7 @@ const StyledBlog = styled.li`
     }
   }
 
-  .blog-description {
+  .project-description {
     color: var(--light-slate);
     font-size: 17px;
 
@@ -144,7 +144,7 @@ const StyledBlog = styled.li`
     }
   }
 
-  .blog-tech-list {
+  .project-tech-list {
     display: flex;
     align-items: flex-end;
     flex-grow: 1;
@@ -165,13 +165,13 @@ const StyledBlog = styled.li`
   }
 `;
 
-const Blogs = () => {
+const Projects = () => {
   const data = useStaticQuery(graphql`
     query {
-      blogs: allMarkdownRemark(
+      projects: allMarkdownRemark(
         filter: {
-          fileAbsolutePath: { regex: "/content/blogs/" }
-          frontmatter: { showInBlogs: { ne: false } }
+          fileAbsolutePath: { regex: "/content/projects/" }
+          frontmatter: { showInProjects: { ne: false } }
         }
         sort: { fields: [frontmatter___date], order: DESC }
       ) {
@@ -193,7 +193,7 @@ const Blogs = () => {
   const [showMore, setShowMore] = useState(false);
   const revealTitle = useRef(null);
   const revealArchiveLink = useRef(null);
-  const revealBlogs = useRef([]);
+  const revealProjects = useRef([]);
   const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
@@ -203,26 +203,26 @@ const Blogs = () => {
 
     sr.reveal(revealTitle.current, srConfig());
     sr.reveal(revealArchiveLink.current, srConfig());
-    revealBlogs.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
+    revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
   }, []);
 
   const GRID_LIMIT = 6;
-  const blogs = data.blogs.edges.filter(({ node }) => node);
-  const firstSix = blogs.slice(0, GRID_LIMIT);
-  const blogsToShow = showMore ? blogs : firstSix;
+  const projects = data.projects.edges.filter(({ node }) => node);
+  const firstSix = projects.slice(0, GRID_LIMIT);
+  const projectsToShow = showMore ? projects : firstSix;
 
-  const blogInner = node => {
+  const projectInner = node => {
     const { frontmatter, html } = node;
     const { github, external, title, tech } = frontmatter;
 
     return (
-      <div className="blog-inner">
+      <div className="project-inner">
         <header>
-          <div className="blog-top">
+          <div className="project-top">
             <div className="folder">
               <Icon name="Folder" />
             </div>
-            <div className="blog-links">
+            <div className="project-links">
               {github && (
                 <a href={github} aria-label="GitHub Link" target="_blank" rel="noreferrer">
                   <Icon name="GitHub" />
@@ -241,18 +241,18 @@ const Blogs = () => {
             </div>
           </div>
 
-          <h3 className="blog-title">
+          <h3 className="project-title">
             <a href={external} target="_blank" rel="noreferrer">
               {title}
             </a>
           </h3>
 
-          <div className="blog-description" dangerouslySetInnerHTML={{ __html: html }} />
+          <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
         </header>
 
         <footer>
           {tech && (
-            <ul className="blog-tech-list">
+            <ul className="project-tech-list">
               {tech.map((tech, i) => (
                 <li key={i}>{tech}</li>
               ))}
@@ -264,38 +264,38 @@ const Blogs = () => {
   };
 
   return (
-    <StyledBlogsSection>
-      <h2 ref={revealTitle}>Other Noteworthy Blogs</h2>
+    <StyledProjectsSection id="other-noteworthy-projects">
+      <h2 ref={revealTitle}>Other Noteworthy Projects</h2>
 
       <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
         view the archive
       </Link>
 
-      <ul className="blogs-grid">
+      <ul className="projects-grid">
         {prefersReducedMotion ? (
           <>
-            {blogsToShow &&
-              blogsToShow.map(({ node }, i) => (
-                <StyledBlog key={i}>{blogInner(node)}</StyledBlog>
+            {projectsToShow &&
+              projectsToShow.map(({ node }, i) => (
+                <StyledProject key={i}>{projectInner(node)}</StyledProject>
               ))}
           </>
         ) : (
           <TransitionGroup component={null}>
-            {blogsToShow &&
-              blogsToShow.map(({ node }, i) => (
+            {projectsToShow &&
+              projectsToShow.map(({ node }, i) => (
                 <CSSTransition
                   key={i}
                   classNames="fadeup"
                   timeout={i >= GRID_LIMIT ? (i - GRID_LIMIT) * 300 : 300}
                   exit={false}>
-                  <StyledBlog
+                  <StyledProject
                     key={i}
-                    ref={el => (revealBlogs.current[i] = el)}
+                    ref={el => (revealProjects.current[i] = el)}
                     style={{
                       transitionDelay: `${i >= GRID_LIMIT ? (i - GRID_LIMIT) * 100 : 0}ms`,
                     }}>
-                    {blogInner(node)}
-                  </StyledBlog>
+                    {projectInner(node)}
+                  </StyledProject>
                 </CSSTransition>
               ))}
           </TransitionGroup>
@@ -305,8 +305,8 @@ const Blogs = () => {
       <button className="more-button" onClick={() => setShowMore(!showMore)}>
         Show {showMore ? 'Less' : 'More'}
       </button>
-    </StyledBlogsSection>
+    </StyledProjectsSection>
   );
 };
 
-export default Blogs;
+export default Projects;
