@@ -1,10 +1,10 @@
 ---
 date: '2022-12-21'
-title: 'Security Researcher'
+title: 'Security Consultant'
 company: 'Binary10.Tech'
 location: 'India'
 range: 'March 2022 - September 2022'
-url: 'https://www.apple.com/music/'
+url: 'https://www.binary10.tech'
 ---
 
 - Project Lead: Spearheaded cybersecurity training and phishing simulations (KnowBe4) for a 100+ employee client.

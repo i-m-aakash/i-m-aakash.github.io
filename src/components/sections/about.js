@@ -135,23 +135,17 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-            Hello World! I’m Aakash Mudigonda, a Master’s student in Cybersecurity at the {' '}<a href="https://www.umd.edu">University of Maryland</a>, and I’m just as excited about reinforcing digital defenses as I am about pulling them apart to see what’s inside. From strengthening enterprise applications against threats to reverse engineering malware deep at the assembly level, my work spans both defending networks and simulating attacks, giving me hands-on experience with all sides of security. 
-            </p>
-            <p>I've walked both sides of the security landscape: setting up robust Active Directory labs, dismantling command-and-control servers, and hunting down hidden malicious code.
+            Hello World! 
             </p>
             <p>
-            My approach is turning complexity into clarity. I believe complex security findings should be crystal clear to everyone, from seasoned IT professionals to curious newcomers. Whether I’m fine-tuning web application security controls, reinforcing codebases against common vulnerabilities, or ensuring that software meets industry standards, I'm driven by one core mission: practical solutions with real impact.
+            I’m Aakash Mudigonda, a Master’s student in Cybersecurity at the University of Maryland, and I’m just as excited about reinforcing digital defenses as I am about pulling them apart to see what’s inside. Over the years, I’ve built out Active Directory environments, dug into command-and-control servers, and tracked down hidden malicious code.
             </p>
+            
+            <p>I’m all about turning complexity into clarity, no matter who’s listening. My background includes time at {''}<a href="https://underarmour.com/">Under Armour</a>, {''}<a href="https://qure.ai/">a Health AI Company - Qure.Ai</a>, at {' '}<a href="https://www.umd.edu/">University of Maryland</a>, and at {' '}
+            <a href="https://binary10.tech/">a startup - Binary10.Tech</a>. </p>
 
-            <p>
-              I’ve had the privilege of working at{' '}
-              <a href="https://underarmour.com/">Under Armour</a>, {' '}
-              <a href="https://qure.ai/">a Health AI Company - Qure.Ai</a>, and at {' '}
-              <a href="https://www.umd.edu/">University of Maryland</a>, and{' '}
-              <a href="https://binary10.tech/">a startup - Binary10.Tech</a>
-            </p>
-            <p> 
-              My main focus these days is diving deeper into offensive security and working towards my{' '}<a href='https://www.stationx.net/oscp-exam-guide/#what-is-the-offsec-certified-professional-oscp-certification'>OSCP+ certification</a>.
+            <p> Right now, I’m diving deeper into offensive security and working toward my{' '}<a href='https://www.stationx.net/oscp-exam-guide/#what-is-the-offsec-certified-professional-oscp-certification'>OSCP+ certification</a>.
+
             </p>
           </div>
 

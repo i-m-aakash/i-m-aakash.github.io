@@ -3,8 +3,8 @@ date: '2023-04-01'
 title: 'Reverse Engineering - TA'
 company: 'University of Maryland'
 location: 'Northeastern University'
-range: 'Spring 2016 & 2017'
-url: 'https://web.northeastern.edu/scout/'
+range: 'August 2024 - January 2025'
+url: 'https://www.umd.edu'
 ---
 
 - Performed comprehensive malware reverse engineering, including interpreting strings, inspecting Windows API calls, and identifying packed executables, to reveal host-based and network-level indicators.

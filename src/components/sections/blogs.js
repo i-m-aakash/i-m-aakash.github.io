@@ -264,8 +264,8 @@ const Projects = () => {
   };
 
   return (
-    <StyledProjectsSection id="other-noteworthy-projects">
-      <h2 ref={revealTitle}>Other Noteworthy Projects</h2>
+    <StyledProjectsSection id="blogs">
+      <h2 className="numbered-heading overline">Blogs</h2>
 
       <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
         view the archive
@@ -309,4 +309,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Blogs;
