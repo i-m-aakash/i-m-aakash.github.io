@@ -388,7 +388,7 @@ const Featured = () => {
                         </a>
                       )}
                       {medium && (
-                        <a href={medium} aria-label="Medium Link">
+                        <a href={medium} aria-label="medium Link">
                           <Icon name="Medium" />
                         </a>
                       )}

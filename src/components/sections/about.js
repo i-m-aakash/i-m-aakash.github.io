@@ -125,7 +125,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Application Security', 'Red Teaming', 'Product Security', 'Offensive Security', 'AI/ML Security', 'Secure Coding', 'Malware Anaylsis',  'GRC' ];
+  const skills = ['Application Security', 'Red Teaming', 'Product Security', 'Offensive Security', 'Secure Coding', 'Malware Anaylsis',  'Reverse Engineering', 'GRC' ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -140,14 +140,14 @@ const About = () => {
           Over the years, I’ve built out Active Directory environments, dug into command-and-control servers, and tracked down hidden malicious code.
           </p>
 
-          <p>I’m all about turning complexity into simplicity, no matter who’s listening. My background includes time at{' '}
-          <a href="https://underarmour.com/">Under Armour</a>, at {' '}
+          <p>I’m all about turning complexity into simplicity, no matter who’s listening. My background includes time at an {' '}
+          <a href="https://underarmour.com/">MNC - Under Armour</a>, at {' '}
           <a href="https://qure.ai/">a Health AI Company - Qure.Ai</a>, at {' '}
           <a href="https://www.umd.edu/">University of Maryland</a>, and{' '}
           <a href="https://binary10.tech/">a startup - Binary10.Tech</a>. 
           </p>
           <p>
-          Right now, I’m diving deeper into offensive security and working toward my{' '}<a href='https://www.stationx.net/oscp-exam-guide/#what-is-the-offsec-certified-professional-oscp-certification'>OSCP+ certification</a>.
+          Right now, I’m diving deeper into offensive security and working towards my{' '}<a href='https://www.stationx.net/oscp-exam-guide/#what-is-the-offsec-certified-professional-oscp-certification'>OSCP+ certification</a>.
           </p>
 
           </div>
