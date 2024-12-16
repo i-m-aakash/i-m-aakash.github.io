@@ -44,6 +44,11 @@ const StyledHeroSection = styled.section`
     ${({ theme }) => theme.mixins.bigButton};
     margin-top: 50px;
   }
+
+  .medium-link{
+    ${({ theme }) => theme.mixins.bigButton};
+    margin-top: 5px;
+  }
 `;
 
 const Hero = () => {
@@ -83,8 +88,25 @@ const Hero = () => {
     </a>
   );
 
+  const six = (
+    <a
+      className="medium-link"
+      href="https://medium.com/@aakash14302/binaries-by-bear-ly-on-coffee-59600ca733e5"
+      target="_blank"
+      rel="noreferrer"
+      style={{ marginLeft: '10px' }}>
+      My Blog!
+    </a>
+  );
+
+  const buttonContainer = (
+    <div className="button-container">
+      {five}
+      {six}
+    </div>
+  );
   
-  const items = [one, two, three, four, five];
+  const items = [one, two, three, four, buttonContainer];
 
   return (
     <StyledHeroSection>
