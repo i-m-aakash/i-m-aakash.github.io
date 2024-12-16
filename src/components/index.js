@@ -14,4 +14,3 @@ export { default as Featured } from './sections/featured';
 export { default as Blogs } from './sections/blogs';
 export { default as Contact } from './sections/contact';
 export { default as Conferences } from './conferences';
-export { default as Projects } from './sections/projects';

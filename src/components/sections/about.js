@@ -134,19 +134,22 @@ const About = () => {
       <div className="inner">
         <StyledText>
           <div>
-            <p>
-            Hello World! 
-            </p>
-            <p>
-            I’m Aakash Mudigonda, a Master’s student in Cybersecurity at the University of Maryland, and I’m just as excited about reinforcing digital defenses as I am about pulling them apart to see what’s inside. Over the years, I’ve built out Active Directory environments, dug into command-and-control servers, and tracked down hidden malicious code.
-            </p>
-            
-            <p>I’m all about turning complexity into clarity, no matter who’s listening. My background includes time at {''}<a href="https://underarmour.com/">Under Armour</a>, {''}<a href="https://qure.ai/">a Health AI Company - Qure.Ai</a>, at {' '}<a href="https://www.umd.edu/">University of Maryland</a>, and at {' '}
-            <a href="https://binary10.tech/">a startup - Binary10.Tech</a>. </p>
 
-            <p> Right now, I’m diving deeper into offensive security and working toward my{' '}<a href='https://www.stationx.net/oscp-exam-guide/#what-is-the-offsec-certified-professional-oscp-certification'>OSCP+ certification</a>.
+            <p>Hello World! I’m Aakash Mudigonda, a Master’s student in Cybersecurity at the {' '}<a href="https://www.umd.edu">University of Maryland</a>, and I’m just as excited about reinforcing digital defenses as I am about pulling them apart to see what’s inside.</p>
+          <p>
+          Over the years, I’ve built out Active Directory environments, dug into command-and-control servers, and tracked down hidden malicious code.
+          </p>
 
-            </p>
+          <p>I’m all about turning complexity into simplicity, no matter who’s listening. My background includes time at{' '}
+          <a href="https://underarmour.com/">Under Armour</a>, at {' '}
+          <a href="https://qure.ai/">a Health AI Company - Qure.Ai</a>, at {' '}
+          <a href="https://www.umd.edu/">University of Maryland</a>, and{' '}
+          <a href="https://binary10.tech/">a startup - Binary10.Tech</a>. 
+          </p>
+          <p>
+          Right now, I’m diving deeper into offensive security and working toward my{' '}<a href='https://www.stationx.net/oscp-exam-guide/#what-is-the-offsec-certified-professional-oscp-certification'>OSCP+ certification</a>.
+          </p>
+
           </div>
 
           <ul className="skills-list">

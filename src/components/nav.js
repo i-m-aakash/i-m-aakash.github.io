@@ -48,7 +48,7 @@ const StyledHeader = styled.header`
       css`
         height: var(--nav-scroll-height);
         transform: translateY(calc(var(--nav-scroll-height) * -1));
-        box-shadow: 0 10px 30px -10px rgba(255, 0, 0, 0.2);
+        box-shadow: 0 10px 30px -10px rgba(255, 0, 0, 0.2);;
       `};
   }
 `;
@@ -217,6 +217,7 @@ const Nav = ({ isHome }) => {
         {prefersReducedMotion ? (
           <>
             {Logo}
+
             <StyledLinks>
               <ol>
                 {navLinks &&
@@ -228,6 +229,7 @@ const Nav = ({ isHome }) => {
               </ol>
               <div>{ResumeLink}</div>
             </StyledLinks>
+
             <Menu />
           </>
         ) : (
@@ -239,6 +241,7 @@ const Nav = ({ isHome }) => {
                 </CSSTransition>
               )}
             </TransitionGroup>
+
             <StyledLinks>
               <ol>
                 <TransitionGroup component={null}>
@@ -253,6 +256,7 @@ const Nav = ({ isHome }) => {
                     ))}
                 </TransitionGroup>
               </ol>
+
               <TransitionGroup component={null}>
                 {isMounted && (
                   <CSSTransition classNames={fadeDownClass} timeout={timeout}>
@@ -263,6 +267,7 @@ const Nav = ({ isHome }) => {
                 )}
               </TransitionGroup>
             </StyledLinks>
+
             <TransitionGroup component={null}>
               {isMounted && (
                 <CSSTransition classNames={fadeClass} timeout={timeout}>
