@@ -2,8 +2,8 @@
 date: '2'
 title: 'Vulnerable AD'
 cover: './vulnerable_ad.png'
-github: 'https://github.com/bchiang7/spotify-profile'
-external: 'https://spotify-profile.herokuapp.com/'
+medium: 'https://aakashmudigonda.medium.com'
+external: ''
 tech:
   - React
   - Styled Components

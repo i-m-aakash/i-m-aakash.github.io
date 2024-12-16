@@ -91,11 +91,11 @@ const Hero = () => {
   const six = (
     <a
       className="medium-link"
-      href="https://medium.com/@aakash14302/binaries-by-bear-ly-on-coffee-59600ca733e5"
+      href="https://aakashmudigonda.medium.com/"
       target="_blank"
       rel="noreferrer"
       style={{ marginLeft: '10px' }}>
-      My Blog!
+      My Blogs!
     </a>
   );
 

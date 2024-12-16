@@ -7,8 +7,9 @@ import {
   IconExternal,
   IconFolder,
   IconFork,
-  IconGitHub,
+  // IconGitHub,
   IconInstagram,
+  IconMedium,
   IconLinkedin,
   IconLoader,
   IconLogo,
@@ -31,8 +32,8 @@ const Icon = ({ name }) => {
       return <IconFolder />;
     case 'Fork':
       return <IconFork />;
-    case 'GitHub':
-      return <IconGitHub />;
+    // case 'GitHub':
+      // return <IconGitHub />;
     case 'Instagram':
       return <IconInstagram />;
     case 'Linkedin':
@@ -47,6 +48,8 @@ const Icon = ({ name }) => {
       return <IconStar />;
     case 'Twitter':
       return <IconTwitter />;
+    case 'Medium':
+      return <IconMedium />;
     default:
       return <IconExternal />;
   }
