@@ -8,7 +8,7 @@ external: "https://h1.community/events/details/hackerone-diversity-and-inclusion
 cta: ""
 ---
 
-Had the opportunity to meet well-known cybersecurity leaders at [Glass Firewall Conference](#) who shared their experiences, from building their careers in the industry to working on bug bounty programs, giving unique insights into their journeys and approaches to tackling security challenges.
+Had the opportunity to meet well-known cybersecurity leaders at [Glass Firewall Conference]('#') who shared their experiences, from building their careers in the industry to working on bug bounty programs, giving unique insights into their journeys and approaches to tackling security challenges.
 
 Won Capture-The-Flag (CTF) challenge, where I tackled vulnerable website hosted on an IoT Device, and showcased my skills in a high-pressure, hands-on environment.
 
