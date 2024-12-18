@@ -60,8 +60,8 @@ const Contact = () => {
       <h2 className="title">Get In Touch</h2>
 
       <p>
-      I’m actively seeking new opportunities in the field of Security and would love to connect!</p>
-      <p> My inbox is always open, and I’m excited to discuss potential roles or collaborations</p>
+      I’m looking to take on new challenges in Security and would love to connect.</p>
+      <p>If you’re exploring ideas, roles, or collaborations, I’m always open to a good conversation and seeing where it leads.</p>
       <p> Let’s have a chat!
       </p>
 
